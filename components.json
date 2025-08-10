@@ -1,0 +1,404 @@
+{
+  "leads": [
+    {
+      "name": "Paul Saas",
+      "apollo_profile_url": "https://app.apollo.io/#/people/66fea4405956ef00012a5364?overrideScoreId=score",
+      "job_title": "Chief Executive Officer",
+      "company": {
+        "name": "PAUL SAAS & ASSOCIATES, INC.",
+        "apollo_url": "https://app.apollo.io/#/organizations/6742813bdb29e00001d1d0aa",
+        "employees": 7,
+        "industries": [],
+        "keywords": []
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "Wichita, Kansas",
+      "linkedin_url": "http://www.linkedin.com/in/paul-saas-3806b7265"
+    },
+    {
+      "name": "Elhadji Sall",
+      "apollo_profile_url": "https://app.apollo.io/#/people/66fb5ff5b5ed3900018e9ce2?overrideScoreId=score",
+      "job_title": "CEO",
+      "company": {
+        "name": "Obsessed With SaaS",
+        "apollo_url": "https://app.apollo.io/#/organizations/5d66b43f28941200cd52bf84",
+        "employees": 4,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["funnels", "marketing funnels"]
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "Atlanta, Georgia",
+      "linkedin_url": "http://www.linkedin.com/in/elhadji-sall"
+    },
+    {
+      "name": "Rachael W------",
+      "apollo_profile_url": "https://app.apollo.io/#/people/55c31bed7369640b74fb3200?overrideScoreId=score",
+      "job_title": "Co-Chief Executive Officer l Co-Founder",
+      "company": {
+        "name": "SAAS and Co.",
+        "apollo_url": "https://app.apollo.io/#/organizations/6866e00bb9d4e3000d26903f",
+        "employees": "N/A",
+        "industries": ["Information Technology & Services"],
+        "keywords": ["technology, information & internet"]
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "San Jose, California",
+      "linkedin_url": null
+    },
+    {
+      "name": "Paul Layzell",
+      "apollo_profile_url": "https://app.apollo.io/#/people/653128431dc7370001c3fdac?overrideScoreId=score",
+      "job_title": "Chief Executive Officer",
+      "company": {
+        "name": "SAAS SOURCING LIMITED",
+        "apollo_url": "https://app.apollo.io/#/organizations/55922f5a7369641b330d7d00",
+        "employees": 1,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["it services & it consulting"]
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "Chelmsford, United Kingdom",
+      "linkedin_url": "http://www.linkedin.com/in/paul-l-b5a8022"
+    },
+    {
+      "name": "Korey G------",
+      "apollo_profile_url": "https://app.apollo.io/#/people/64fe277a24e3f9000176e90c?overrideScoreId=score",
+      "job_title": "Chief Executive Officer",
+      "company": {
+        "name": "Big SaaS Solutions",
+        "apollo_url": "https://app.apollo.io/#/organizations/6511295db16e0600a3a1ebcc",
+        "employees": 1,
+        "industries": ["Marketing & Advertising"],
+        "keywords": ["marketing services", "marketing & advertising"]
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "Tacoma, Washington",
+      "linkedin_url": null
+    },
+    {
+      "name": "Jose Lugo",
+      "apollo_profile_url": "https://app.apollo.io/#/people/5acb644fa6da98c5d4aa4ae6?overrideScoreId=score",
+      "job_title": "Chief Executive Officer",
+      "company": {
+        "name": "Saas Power Marketing",
+        "apollo_url": "https://app.apollo.io/#/organizations/683bbe6bdba99600013a15e0",
+        "employees": 1,
+        "industries": ["Marketing & Advertising"],
+        "keywords": ["marketing services", "marketing & advertising"]
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "Merchantville, New Jersey",
+      "linkedin_url": "http://www.linkedin.com/in/jose-lugo-bb7aa140"
+    },
+    {
+      "name": "Minerva Chatterjee",
+      "apollo_profile_url": "https://app.apollo.io/#/people/60f9105a14efb200011d4d65?overrideScoreId=score",
+      "job_title": "CEO | FOUNDER | Technology & AI",
+      "company": {
+        "name": "B2B SaaS",
+        "apollo_url": "https://app.apollo.io/#/organizations/6473c8547e96770001794b07",
+        "employees": 16,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["it services & it consulting"]
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "United Kingdom",
+      "linkedin_url": "http://www.linkedin.com/in/minerva-chatterjee-2203"
+    },
+    {
+      "name": "Bob Bonds",
+      "apollo_profile_url": "https://app.apollo.io/#/people/61eb372782c1c800019c2663?overrideScoreId=score",
+      "job_title": "Chief Executive Officer",
+      "company": {
+        "name": "MaaS SaaS Technology",
+        "apollo_url": "https://app.apollo.io/#/organizations/5e55b66746c7200001c4ea47",
+        "employees": 3,
+        "industries": ["Information Technology & Services"],
+        "keywords": []
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "United Kingdom",
+      "linkedin_url": "http://www.linkedin.com/in/bob-bonds-050822191"
+    },
+    {
+      "name": "Johnny P------",
+      "apollo_profile_url": "https://app.apollo.io/#/people/66f8d1d5af7b930001479f77?overrideScoreId=score",
+      "job_title": "CEO, Partner",
+      "company": {
+        "name": "SaaS Academy",
+        "apollo_url": "https://app.apollo.io/#/organizations/5d25da8eb93fc30bad5ef455",
+        "employees": 69,
+        "industries": ["Professional Training & Coaching"],
+        "keywords": ["saas", "b2b saas", "coaching"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "San Luis Obispo, California",
+      "linkedin_url": null
+    },
+    {
+      "name": "Heather Bemis",
+      "apollo_profile_url": "https://app.apollo.io/#/people/645f6967a106eb00014f144e?overrideScoreId=score",
+      "job_title": "CEO+Founder, SaaS Visionary",
+      "company": {
+        "name": "SWAP PM",
+        "apollo_url": "https://app.apollo.io/#/organizations/67edc72e014eb7001d8ef80e",
+        "employees": 1,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["engineering", "scheduling"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "Westminster, Colorado",
+      "linkedin_url": "http://www.linkedin.com/in/heather-bemis"
+    },
+    {
+      "name": "Matt Anderson",
+      "apollo_profile_url": "https://app.apollo.io/#/people/66f55b46962ce60001a60d2c?overrideScoreId=score",
+      "job_title": "Chief Executive Officer",
+      "company": {
+        "name": "LTV SaaS Growth Fund",
+        "apollo_url": "https://app.apollo.io/#/organizations/5ed30c608f9c8a0001fba668",
+        "employees": 33,
+        "industries": ["Investment Management"],
+        "keywords": ["saas", "deal flow access"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "New York, New York",
+      "linkedin_url": "http://www.linkedin.com/in/matthewanderson376"
+    },
+    {
+      "name": "Sean Hyatt",
+      "apollo_profile_url": "https://app.apollo.io/#/people/66fc6f10c4d98c000187f761?overrideScoreId=score",
+      "job_title": "Chief Executive Officer",
+      "company": {
+        "name": "LTV SaaS Growth Fund",
+        "apollo_url": "https://app.apollo.io/#/organizations/5ed30c608f9c8a0001fba668",
+        "employees": 33,
+        "industries": ["Investment Management"],
+        "keywords": ["saas", "deal flow access"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "Aurora, Colorado",
+      "linkedin_url": "http://www.linkedin.com/in/sean-hyatt-860bb760"
+    },
+    {
+      "name": "Andy Zhao",
+      "apollo_profile_url": "https://app.apollo.io/#/people/66f77f8926ca4800012ab7f9?overrideScoreId=score",
+      "job_title": "CEO",
+      "company": {
+        "name": "展招AI+SaaS",
+        "apollo_url": "https://app.apollo.io/#/organizations/636f8036983e7100012f2cd2",
+        "employees": 15,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["software development"]
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "United States",
+      "linkedin_url": "http://www.linkedin.com/in/andy-zhao-01866738"
+    },
+    {
+      "name": "Paul Rayner",
+      "apollo_profile_url": "https://app.apollo.io/#/people/67012aec222a810001416e65?overrideScoreId=score",
+      "job_title": "CEO",
+      "company": {
+        "name": "Oakstone International | SaaS Executive Search",
+        "apollo_url": "https://app.apollo.io/#/organizations/6257ec18751e7000d87c5bce",
+        "employees": 22,
+        "industries": ["Staffing & Recruiting"],
+        "keywords": ["recruitment", "software", "europe"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "Bournemouth, United Kingdom",
+      "linkedin_url": "http://www.linkedin.com/in/paulrayner"
+    },
+    {
+      "name": "Tsung T------",
+      "apollo_profile_url": "https://app.apollo.io/#/people/66fea60d0f4e9c0001b88e35?overrideScoreId=score",
+      "job_title": "Founder / CEO / Solution Director",
+      "company": {
+        "name": "KABOB | AIoT and Retail SaaS",
+        "apollo_url": "https://app.apollo.io/#/organizations/5ed37c5b179ff000018be7af",
+        "employees": 21,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["enterprise software", "saas", "retail"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "Ontario, California",
+      "linkedin_url": null
+    },
+    {
+      "name": "Federico Bernardi",
+      "apollo_profile_url": "https://app.apollo.io/#/people/611a7b7cd128ae00019829d8?overrideScoreId=score",
+      "job_title": "Co-Founder & CEO (SaaS, Marketplace)",
+      "company": {
+        "name": "Chivado",
+        "apollo_url": "https://app.apollo.io/#/organizations/5f40919564d4090001f2928e",
+        "employees": 4,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["software development"]
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "London, United Kingdom",
+      "linkedin_url": "http://www.linkedin.com/in/federico-bernardi"
+    },
+    {
+      "name": "Mark Mele",
+      "apollo_profile_url": "https://app.apollo.io/#/people/6722d74cbeb68a0001a4c07d?overrideScoreId=score",
+      "job_title": "CEO and Founder B2B SAAS Consulting",
+      "company": {
+        "name": "Scale X Formula",
+        "apollo_url": "https://app.apollo.io/#/organizations/61ec756c568e2c00019dbc71",
+        "employees": 1,
+        "industries": ["Management Consulting"],
+        "keywords": ["channel partners", "account executive"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "Miami, Florida",
+      "linkedin_url": "http://www.linkedin.com/in/mark-mele"
+    },
+    {
+      "name": "Michael Bertoni",
+      "apollo_profile_url": "https://app.apollo.io/#/contacts/6896cc601332df00210d3130?overrideScoreId=score",
+      "job_title": "Founder and CEO",
+      "company": {
+        "name": "SaaS Talent",
+        "apollo_url": "https://app.apollo.io/#/accounts/6896cc601332df00210d3132",
+        "employees": 23,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["staffing", "recruiting", "fulltime hiring"]
+      },
+      "email_status": "mbertoni@saas-talent.com",
+      "phone_status": "Request phone number",
+      "location": "Philadelphia, Pennsylvania",
+      "linkedin_url": "http://www.linkedin.com/in/michaelbertoni33"
+    },
+    {
+      "name": "Edris Ali",
+      "apollo_profile_url": "https://app.apollo.io/#/people/662b79cc2537b90007d3dbc5?overrideScoreId=score",
+      "job_title": "Founder and CEO of SaaS Home Care LLC",
+      "company": {
+        "name": "SaaS Home Care LLC",
+        "apollo_url": "https://app.apollo.io/#/organizations/67c043107de53b001550f6d4",
+        "employees": 1,
+        "industries": ["Hospital & Health Care"],
+        "keywords": ["home health", "home health care services"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "Minneapolis, Minnesota",
+      "linkedin_url": "http://www.linkedin.com/in/edrisali"
+    },
+    {
+      "name": "Yoni Kanarek",
+      "apollo_profile_url": "https://app.apollo.io/#/people/6320606dbf08580001761937?overrideScoreId=score",
+      "job_title": "Founder",
+      "company": {
+        "name": "SaaS",
+        "apollo_url": "https://app.apollo.io/#/organizations/55920e637369641859db3f00",
+        "employees": 640,
+        "industries": ["Venture Capital & Private Equity"],
+        "keywords": ["venture capital & private equity principals"]
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "United Kingdom",
+      "linkedin_url": "http://www.linkedin.com/in/yoni-kanarek-0b4036234"
+    },
+    {
+      "name": "Dave L------",
+      "apollo_profile_url": "https://app.apollo.io/#/people/687600253d2a160001dde848?overrideScoreId=score",
+      "job_title": "CEO TaxPlanIQ",
+      "company": {
+        "name": "TaxPlanIQ (SaaS tax planning for accountants)",
+        "apollo_url": "https://app.apollo.io/#/organizations/605b998b3652b500a45b6a3f",
+        "employees": 14,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["software development"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "Delaware, Ohio",
+      "linkedin_url": null
+    },
+    {
+      "name": "Jon Gillespie-Brown",
+      "apollo_profile_url": "https://app.apollo.io/#/people/66f7aab473a74d0001ea5ec7?overrideScoreId=score",
+      "job_title": "President/CEO",
+      "company": {
+        "name": "Nalpeiron Growth Platform for SaaS Software",
+        "apollo_url": "https://app.apollo.io/#/organizations/5fc80b00c8330a0001cb45c1",
+        "employees": 25,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["software license management"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "Denver, Colorado",
+      "linkedin_url": "http://www.linkedin.com/in/gillespiebrown"
+    },
+    {
+      "name": "Affiliatefox Software",
+      "apollo_profile_url": "https://app.apollo.io/#/people/6318c5fe63fa0900013c9bf0?overrideScoreId=score",
+      "job_title": "Founder",
+      "company": {
+        "name": "SaaS",
+        "apollo_url": "https://app.apollo.io/#/organizations/55920e637369641859db3f00",
+        "employees": 640,
+        "industries": ["Venture Capital & Private Equity"],
+        "keywords": ["venture capital & private equity principals"]
+      },
+      "email_status": "Access Required (Unavailable)",
+      "phone_status": "Access Required",
+      "location": "Sheridan, Wyoming",
+      "linkedin_url": "http://www.linkedin.com/in/affiliatefox"
+    },
+    {
+      "name": "Atif Abbasi",
+      "apollo_profile_url": "https://app.apollo.io/#/people/66f789df26ca4800012e56c8?overrideScoreId=score",
+      "job_title": "Founder",
+      "company": {
+        "name": "Saas Landings",
+        "apollo_url": "https://app.apollo.io/#/organizations/6784f65e37bd9d00016cc1c9",
+        "employees": 1,
+        "industries": ["Design"],
+        "keywords": ["design services", "website development"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "Casper, Wyoming",
+      "linkedin_url": "http://www.linkedin.com/in/atif-ui-ux-designer"
+    },
+    {
+      "name": "Deepak K------",
+      "apollo_profile_url": "https://app.apollo.io/#/people/6175429fb3ccca0001226e1b?overrideScoreId=score",
+      "job_title": "Founder",
+      "company": {
+        "name": "SaaS Armour.ai",
+        "apollo_url": "https://app.apollo.io/#/organizations/680bdd7ed19c83002111ed36",
+        "employees": 1,
+        "industries": ["Information Technology & Services"],
+        "keywords": ["technology, information & internet"]
+      },
+      "email_status": "Access Required (Verified)",
+      "phone_status": "Access Required",
+      "location": "San Francisco, California",
+      "linkedin_url": null
+    }
+  ]
+}

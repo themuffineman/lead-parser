@@ -1,0 +1,120 @@
+import { GoogleGenAI } from "@google/genai";
+import { JSDOM } from "jsdom";
+export type LeadPlatforms = "Apollo" | "Sales Navigator";
+
+export class Parser {
+  private input: {
+    html: string | null;
+    platform: LeadPlatforms | null;
+    apiKey: string | undefined;
+  } = {
+    html: null,
+    platform: null,
+    apiKey: process.env.GEMINI_API_KEY,
+  };
+  private aiModel = "gemini-2.5-pro";
+  private prompt = (platform: LeadPlatforms, html: string) => `
+          This is data from ${platform} lead databse. 
+          It's all HTML content of the table that contains the actual lead data. 
+          The tabel HTML was copied and is pasted in below. 
+          You need to sift through this chunk of HTML to generate a vanilla JS script/function I can use to extract the data from this mountain of HTML and return the lead data in a structured JSON format. 
+          Respond with only the script/function, no other text or explanation.
+          The script should be able to run in a browser console and extract the data from the HTML
+          --------------Example FUNCTION BELOW-------------------------
+          (function() {
+              const extractedData = [];
+              const tableRows = document.querySelectorAll('.zp_XgaPk .zp_Uiy0R');
+  
+              tableRows.forEach(row => {
+                  const nameElement = row.querySelector('[data-testid="contact-name-cell"] a');
+                  const jobTitleElement = row.querySelector('[aria-colindex="2"] .zp_YGDgt span');
+                  const companyElement = row.querySelector('[aria-colindex="3"] .zp_xvo3G');
+                  const locationElement = row.querySelector('[aria-colindex="9"] .zp_YGDgt span');
+                  const employeesElement = row.querySelector('[aria-colindex="10"] .zp_Vnh4L');
+                  const linkedinElement = row.querySelector('[aria-colindex="7"] a[href*="linkedin.com"]');
+  
+                  if (nameElement) {
+                  const lead = {
+                      name: nameElement.textContent.trim(),
+                      jobTitle: jobTitleElement ? jobTitleElement.textContent.trim() : null,
+                      company: companyElement ? companyElement.textContent.trim() : null,
+                      location: locationElement ? locationElement.textContent.trim() : null,
+                      employees: employeesElement ? parseInt(employeesElement.textContent.trim(), 10) : null,
+                      linkedin: linkedinElement ? linkedinElement.href : null,
+                  };
+                  extractedData.push(lead);
+                  }
+              });
+  
+              console.log(JSON.stringify(extractedData, null, 2));
+              return JSON.stringify(extractedData, null, 2);
+          })();
+          -------------------------HTML BELOW------------------------
+          <div>...</div>
+          -------------------------END OF HTML------------------------
+          ${html}
+      `;
+  private systemPrompt =
+    "You are an expert data ectractor. You specialise in extracting structured data from unstructured html data, you do this by providing a script or function to run to execute the extraction";
+  constructor(input: {
+    html?: string;
+    platform?: "Apollo" | "Sales Navigator";
+  }) {
+    if (input.html) this.input.html = input.html;
+    if (input.platform) this.input.platform = input.platform;
+    if (process.env.GEMINI_API_KEY) {
+      this.input.apiKey = process.env.GEMINI_API_KEY;
+    } else {
+      throw new Error("GEMINI_API_KEY is not set in environment variables");
+    }
+  }
+  private async generateExtractionScript() {
+    try {
+      const prompt = this.prompt(this.input.platform!, this.input.html!);
+      const ai = new GoogleGenAI({ apiKey: this.input.apiKey });
+      const aiQueryResponse = await ai.models.generateContent({
+        model: this.aiModel,
+        contents: prompt,
+        config: {
+          systemInstruction: this.systemPrompt,
+          thinkingConfig: {
+            thinkingBudget: 1000,
+          },
+        },
+      });
+      // Extract the script/function from the AI response
+      let content = aiQueryResponse?.candidates?.[0].content?.parts?.[0].text;
+      if (!content) throw new Error("AI did not return a script");
+      // Remove any leading/trailing code fences or markdown formatting
+      content = content.trim();
+      // Handles code fences like ```javascript\n ... \n```
+      if (content.startsWith("```")) {
+        content = content.replace(/^```[a-zA-Z]*\n?/, "").replace(/```$/, "");
+      }
+      // Remove any trailing semicolons at the end of the function
+      content = content.replace(/;\s*$/, "");
+      console.log("Generated script:", content);
+
+      return content;
+    } catch (error: any) {
+      throw new Error(`Failed to generate script: ${error.message}`);
+    }
+  }
+  public async parseHTML() {
+    const script = await this.generateExtractionScript();
+    if (!script) {
+      throw new Error("No function generated by AI");
+    }
+    try {
+      const dom = new JSDOM(this.input.html!, { runScripts: "outside-only" });
+      // Expose the DOM to your script
+      const { window } = dom.window;
+      // Execute the generated script in a safe context
+      const extractedData = window.eval(script);
+      console.log("Extracted Data:", extractedData);
+      return extractedData;
+    } catch (error: any) {
+      throw new Error(`Failed to execute generated script: ${error.message}`);
+    }
+  }
+}
