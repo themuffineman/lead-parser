@@ -1,19 +1,6 @@
 import React from "react";
 
-interface LeadData {
-  name: string;
-  jobTitle: string | null;
-  company: string | null;
-  location: string | null;
-  employees: number | null;
-  linkedin: string | null;
-}
-
-interface DataTableProps {
-  data: LeadData[];
-}
-
-const DataTable: React.FC<DataTableProps> = ({ data }) => {
+const DataTable = ({ data }: { data: string[] }) => {
   // Get all unique keys from the data to create table headers
   const headers = Array.from(new Set(data.flatMap((obj) => Object.keys(obj))));
 
@@ -43,7 +30,7 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
                   key={`${index}-${header}`}
                   className="py-2 px-4 border-b min-w-max border-green-400/10"
                 >
-                  {row[header as keyof LeadData]?.toString() || "-"}
+                  {row[header as any]?.toString() || "-"}
                 </td>
               ))}
             </tr>
