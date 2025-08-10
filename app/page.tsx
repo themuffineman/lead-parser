@@ -3,6 +3,7 @@
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Copy, Download, Loader2, Table, Code, Check } from "lucide-react";
+import toast from "react-hot-toast";
 
 import {
   Select,
@@ -28,24 +29,32 @@ export default function Component() {
 
   const handleParseHTML = async () => {
     setIsLoading(true);
-    try {
-      const parserRes = await fetch("/api/parse", {
-        method: "POST",
-        body: JSON.stringify({
-          html: htmlContent,
-          platform: selectedPlatform,
-        }),
+    const parserRes = fetch("/api/parse", {
+      method: "POST",
+      body: JSON.stringify({
+        html: htmlContent,
+        platform: selectedPlatform,
+      }),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to parse HTML");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setExtractedData(data);
+      })
+      .catch((error) => {
+        console.error("Error parsing HTML:", error);
+        setExtractedData("");
       });
-      if (!parserRes.ok) {
-        throw new Error("Failed to parse HTML");
-      }
-      const data = await parserRes.json();
-      console.log("Parsed Data:", data);
-      setExtractedData(data);
-    } catch (error) {
-      console.error("Error parsing HTML:", error);
-      setExtractedData("");
-    }
+    toast.promise(parserRes, {
+      loading: "Parsing HTML...",
+      success: "Parsed successfully",
+      error: "Error parsing HTML",
+    });
+
     setIsLoading(false);
   };
 
@@ -61,6 +70,7 @@ export default function Component() {
         navigator.clipboard.writeText(csvData);
       } catch (error) {
         console.error("Error converting to CSV:", error);
+        toast.error("Failed to convert data to CSV format.");
         return;
       }
     }
@@ -84,6 +94,7 @@ export default function Component() {
         mimeType = "text/csv";
       } catch (error) {
         console.error("Error converting to CSV:", error);
+        toast.error("Failed to convert data to CSV format.");
         return;
       }
     }

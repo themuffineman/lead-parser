@@ -18,8 +18,8 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
   const headers = Array.from(new Set(data.flatMap((obj) => Object.keys(obj))));
 
   return (
-    <div className="overflow-x-auto">
-      <table className="min-w-full bg-black text-green-400 border border-green-400/30">
+    <div className="overflow-x-auto max-h-9/10">
+      <table className="min-w-full  bg-black text-green-400 border border-green-400/30">
         <thead>
           <tr className="border-b border-green-400/30">
             {headers.map((header) => (

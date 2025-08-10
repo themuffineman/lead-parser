@@ -2,6 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Geist_Mono, Inter_Tight } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const interTight = Inter_Tight({ subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${interTight.className} ${geistMono.variable}`}>
         {children}
+        <Toaster />
       </body>
     </html>
   );
