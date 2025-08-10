@@ -46,13 +46,12 @@ export class Parser {
                   }
               });
   
-              console.log(JSON.stringify(extractedData, null, 2));
+              
               return JSON.stringify(extractedData, null, 2);
           })();
           -------------------------HTML BELOW------------------------
-          <div>...</div>
-          -------------------------END OF HTML------------------------
           ${html}
+          -------------------------END OF HTML------------------------
       `;
   private systemPrompt =
     "You are an expert data ectractor. You specialise in extracting structured data from unstructured html data, you do this by providing a script or function to run to execute the extraction";
@@ -93,7 +92,7 @@ export class Parser {
       }
       // Remove any trailing semicolons at the end of the function
       content = content.replace(/;\s*$/, "");
-      console.log("Generated script:", content);
+      // console.log("Generated script:", content);
 
       return content;
     } catch (error: any) {
@@ -111,7 +110,7 @@ export class Parser {
       const { window } = dom.window;
       // Execute the generated script in a safe context
       const extractedData = window.eval(script);
-      console.log("Extracted Data:", extractedData);
+      // console.log("Extracted Data:", extractedData);
       return extractedData;
     } catch (error: any) {
       throw new Error(`Failed to execute generated script: ${error.message}`);
