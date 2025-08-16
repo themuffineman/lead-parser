@@ -54,13 +54,21 @@ export class Parser {
           -------------------------END OF HTML------------------------
       `;
   private systemPrompt =
-    "You are an expert data ectractor. You specialise in extracting structured data from unstructured html data, you do this by providing a script or function to run to execute the extraction";
+    "You are an expert data extractor. You specialise in extracting structured data from unstructured html data, you do this by providing a script or function to run to execute the extraction";
   constructor(input: {
     html?: string;
     platform?: "Apollo" | "Sales Navigator";
   }) {
-    if (input.html) this.input.html = input.html;
-    if (input.platform) this.input.platform = input.platform;
+    if (input.html) {
+      this.input.html = input.html;
+    } else {
+      throw new Error("HTML input is required");
+    }
+    if (input.platform) {
+      this.input.platform = input.platform;
+    } else {
+      throw new Error("Platform is required");
+    }
     if (process.env.GEMINI_API_KEY) {
       this.input.apiKey = process.env.GEMINI_API_KEY;
     } else {
@@ -81,19 +89,13 @@ export class Parser {
           },
         },
       });
-      // Extract the script/function from the AI response
       let content = aiQueryResponse?.candidates?.[0].content?.parts?.[0].text;
       if (!content) throw new Error("AI did not return a script");
-      // Remove any leading/trailing code fences or markdown formatting
       content = content.trim();
-      // Handles code fences like ```javascript\n ... \n```
       if (content.startsWith("```")) {
         content = content.replace(/^```[a-zA-Z]*\n?/, "").replace(/```$/, "");
       }
-      // Remove any trailing semicolons at the end of the function
       content = content.replace(/;\s*$/, "");
-      // console.log("Generated script:", content);
-
       return content;
     } catch (error: any) {
       throw new Error(`Failed to generate script: ${error.message}`);
@@ -106,11 +108,8 @@ export class Parser {
     }
     try {
       const dom = new JSDOM(this.input.html!, { runScripts: "outside-only" });
-      // Expose the DOM to your script
       const { window } = dom.window;
-      // Execute the generated script in a safe context
       const extractedData = window.eval(script);
-      // console.log("Extracted Data:", extractedData);
       return extractedData;
     } catch (error: any) {
       throw new Error(`Failed to execute generated script: ${error.message}`);

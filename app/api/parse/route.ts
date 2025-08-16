@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
   try {
     const { html, platform } = await req.json();
     const parser = new Parser({ html, platform });
-    const extractedData = await parser.parseHTML();
+    const extractedData = await parser.parseHTML() as string;
     return new Response(JSON.stringify(extractedData), {
       status: 200,
       headers: {
