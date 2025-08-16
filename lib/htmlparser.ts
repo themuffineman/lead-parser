@@ -16,7 +16,7 @@ export class Parser {
   private prompt = (platform: LeadPlatforms, html: string) => `
           This is data from ${platform} lead databse. 
           It's all HTML content of the table that contains the actual lead data. 
-          The tabel HTML was copied and is pasted in below. 
+          The table HTML was copied and is pasted in below. 
           You need to sift through this chunk of HTML to generate a vanilla JS script/function I can use to extract the data from this mountain of HTML and return the lead data in a structured JSON format. 
           Respond with only the script/function, no other text or explanation.
           The script should be able to run in a browser console and extract the data from the HTML
