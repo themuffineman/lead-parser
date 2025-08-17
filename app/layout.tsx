@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Lead Parser",
-  description: "A simple lead parsing interface",
+  description: "A simple lead parser for Apollo and Sales Navigator",
 };
 
 export default function RootLayout({
